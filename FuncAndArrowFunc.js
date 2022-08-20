@@ -94,3 +94,69 @@ var thisInArrowFunc = {
 };
 
 thisInArrowFunc.getThisofArrowFunc()
+
+//normation function
+function testmul(num) {
+    return num * num;
+}
+
+console.log(testmul(10));
+
+//function assignment
+var multiply = function (num) {
+    return num * num;
+}
+
+console.log(multiply(10));
+
+var arrowMul = num => num * 2;
+
+console.log(arrowMul(10));
+
+
+
+var obj1 = {
+    valueOfthis: function () {
+        return this;
+    }
+}
+
+var obj2 = {
+    valofthisarrow: () => {
+        return this;
+    }
+}
+
+console.log(obj1.valueOfthis())//object obj1
+
+console.log(obj2.valofthisarrow())// window/global object
+
+// this inside arrow doenot bwlong to calling function
+// this refers to calling function
+//arrow function this belongs to window instead of calling obj
+
+// USE ARROW FUNTION IF YOUU WANT TO EXCUTE FUNCTION
+//IN CURRENT CONTEXT
+
+var foo = {};
+foo.someMethod = function () {
+    alert(this);
+}
+foo.someMethod();
+
+//you have a stand alone function, the this variable will be bound to the "global" object, almost always the window object in the context of a browser.
+var foo = function () {
+    alert(this);
+}
+foo();
+
+//As a Constructor : belong to object
+
+function Foo() {
+    alert(this);
+}
+
+var myObject = new Foo();
+
+const arrowFun = () => alert(this);
+arrowFun();

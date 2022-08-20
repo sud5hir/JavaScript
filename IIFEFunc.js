@@ -72,3 +72,81 @@ setTimeout(x, 1000);
 setTimeout(function () {
     person.getName();
 }, 1000);
+
+
+// name collosion issue will get avoided
+// it helps to do initilization
+//anonymopus
+var iffeeNampeSpace = function () {
+ 
+    //local function
+    (
+        function TestIFFE() {
+            var name = "A";
+            var code = "1";
+
+            function GetName() {
+                return name;
+            }
+
+            function SetName(value) {
+                name = value;
+            }
+            return { SetName, GetName };
+        })
+return { TestIFFE }
+}();
+
+var x1 = new iffeeNampeSpace();
+
+(x1.SetName("c"));
+
+alert(x1.GetName());
+
+//  var TestIFFE = "";
+// name collosion issue, it is not consuctor, if you will not give name then name collosion will not happen
+//var x = new TestIFFE();
+
+//IFFEE
+(function () {
+    alert("hello");
+})();
+
+
+// name collosion issue will get avoided
+// it helps to do initilization
+//anonymopus
+var iffeeNampeSpace = function () {
+ 
+    //local function
+    (
+        function TestIFFE() {
+            var name = "A";
+            var code = "1";
+
+            function GetName() {
+                return name;
+            }
+
+            function SetName(value) {
+                name = value;
+            }
+            return { SetName, GetName };
+        })
+return { TestIFFE }
+}();
+
+var x1 = new iffeeNampeSpace();
+
+(x1.SetName("c"));
+
+alert(x1.GetName());
+
+//  var TestIFFE = "";
+// name collosion issue, it is not consuctor, if you will not give name then name collosion will not happen
+//var x = new TestIFFE();
+
+//IFFEE
+(function () {
+    alert("hello");
+})();

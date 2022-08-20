@@ -113,3 +113,66 @@ const hero = {
 // Object destructuring:
 const { address: { city } } = hero;
 console.log(city);
+
+var stringArray = ["one", "two", "three"];
+
+        var numericArray = [1, 2, 3, 4];
+
+        var decimalArray = [1.1, 1.2, 1.3];
+
+        var booleanArray = [true, false, false, true];
+
+        var mixedArray = [1, "two", "three", 4];
+               var stringArray = new Array();
+        stringArray[0] = "one";
+        stringArray[1] = "two";
+        stringArray[2] = "three";
+        stringArray[3] = "four";
+
+        var numericArray = new Array(3);
+        numericArray[0] = 1;
+        numericArray[1] = 2;
+        numericArray[2] = 3;
+
+        var mixedArray = new Array(1, "two", 3, "four");
+
+        var students = [{
+            name: "nitu",
+            age: 21,
+            gender: "F"
+        },
+        {
+            name: "niya",
+            age: 21,
+            gender: "F"
+        },
+        {
+            name: "Max",
+            age: 15,
+            gender: "M"
+        },
+        {
+            name: "John",
+            age: 20,
+            gender: "M"
+        },
+        {
+            name: "Tom",
+            age: 25,
+            gender: "M"
+        },
+        ]
+
+
+        console.log(students.length);
+
+        var stud;
+
+        for (var i = 0; i < students.length; i++) {
+
+            stud = students[i].gender;
+
+            if (stud == "M")
+            
+                console.log("Male student:" + students[i].name);
+        }

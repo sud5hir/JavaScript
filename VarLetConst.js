@@ -169,3 +169,52 @@ const redeclareconstItem = 7;
 console.log("redeclareconstItem : -> " + redeclareconstItem);
 redeclareconstItem = 9;
 console.log("redeclareconstItem again : -> " + redeclareconstItem);
+
+//Block Level Test
+{
+    var a1 = 10;
+}
+{
+    let b1 = 20;
+    b1 = "S";
+    console.log(b1);
+}
+{
+    const c1 = 15;
+}
+
+// //Var behaves like a global scope
+// document.getElementById("var").innerHTML = a1;
+// //cannot access outside , it's throw error
+// document.getElementById("let").innerHTML = b1;
+// document.getElementById("const").innerHTML = c1;
+
+//Global Level
+
+var a11 = 10;
+let b11 = 20;
+const c11 = 15;
+console.log(a11);
+console.log(b11);
+document.getElementById("const").innerHTML = c11;
+
+function testVarLetConst() {
+    document.getElementById("var").innerHTML = a11;
+    document.getElementById("let").innerHTML = b11;
+    document.getElementById("const").innerHTML = c11;
+}
+document.getElementById("var").innerHTML = window.a11;
+// Variable declare in global scope with let and const, are not part of window object
+//returns undefiend
+document.getElementById("let").innerHTML = window.b11;
+document.getElementById("const").innerHTML = window.c11;
+
+//Function Level Scope..
+
+function test() {
+    var a = 10;
+    let b = 10;
+}
+// cannot access outside because var is function scopr
+console.log(a);
+console.log(b);
